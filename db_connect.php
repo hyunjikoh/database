@@ -1,37 +1,19 @@
-<?
-function dbconn(){
-$host_name="localhost"; //호스트 네임
-$db_user_id="hyunjikoh"; //DB user id
-$db_name="kohhyunji"; // DB name
-$db_pw="hjkoh0907";  // DB  비번
-$connect= mysql_connect($host_name,$db_user_id,$db_pw);
-mysql_query("set names utf8",$connect);
-mysql_select_db($db_name,$connect);
-if(!$connect)die("연결에 실패 하였습니다.".mysql_error());
-return $connect;
-}
+<?php
 
-//에러메세지 출력
-function Error($msg){
-echo "
- <script>
- window.alert('$msg');
- history.back(1);
- </script>
- ";
- exit; //위에 에러 메세지만 뛰운다.
-}
-
-function member(){
-global $connect;
-$temps=$_COOKIE["COOKIES"];
-$cookise= explode("//",$temps);
-
-//////회원정보///////
-$query= "select * from member where user_id='$cookise[0]' ";
-mysql_query("set names ust8",$connect);
-$result= mysql_query($query, $connect);
-$member= mysql_fetch_array($result);
-return $member;
-}
-?>
+ error_reporting( ~E_DEPRECATED & ~E_NOTICE );
+ 
+ define('DBHOST', 'localhost');
+ define('DBUSER', 'root');
+ define('DBPASS', '');
+ define('DBNAME', 'c9');
+ 
+ $conn = mysql_connect(DBHOST,DBUSER,DBPASS);
+ $dbcon = mysql_select_db(DBNAME);
+ 
+ if ( !$conn ) {
+  die("Connection failed : " . mysql_error());
+ }
+ 
+ if ( !$dbcon ) {
+  die("Database Connection failed : " . mysql_error());
+ }
