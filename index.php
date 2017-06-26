@@ -43,9 +43,10 @@
    
    if( $count == 1 && $row['userPass']==$password ) {
     $_SESSION['user'] = $row['userId'];
-    header("Location: home.php");
+    if($email=='hyunjikoh@naver.com') header("Location: adminhome.php");
+    else header("Location: home.php");
    } else {
-    $errMSG = "다시 시도해 주세요";
+    $errMSG = "정보가 없습니다! 다시 시도해 주세요";
    }
     
   }
