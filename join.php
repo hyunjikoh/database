@@ -30,9 +30,6 @@
   } else if (strlen($name) < 3) {
    $error = true;
    $nameError = "Name must have atleat 3 characters.";
-  } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
-   $error = true;
-   $nameError = "Name must contain alphabets and space.";
   }
   
   //basic email validation

@@ -3,7 +3,6 @@
  session_start();
  require_once 'db_connect.php';
  
- // it will never let you open index(login) page if session is set
  if ( isset($_SESSION['user'])!="" ) {
   header("Location: home.php");
   exit;
@@ -13,7 +12,6 @@
  
  if( isset($_POST['btn-login']) ) { 
   
-  // prevent sql injections/ clear user invalid inputs
   $email = trim($_POST['email']);
   $email = strip_tags($email);
   $email = htmlspecialchars($email);
@@ -21,22 +19,20 @@
   $pass = trim($_POST['pass']);
   $pass = strip_tags($pass);
   $pass = htmlspecialchars($pass);
-  // prevent sql injections / clear user invalid inputs
   
   if(empty($email)){
    $error = true;
-   $emailError = "Please enter your email address.";
+   $emailError = "이메일을 입력해주세요";
   } else if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
    $error = true;
-   $emailError = "Please enter valid email address.";
+   $emailError = "이메일을 정확히 입력해주세요";
   }
   
   if(empty($pass)){
    $error = true;
-   $passError = "Please enter your password.";
+   $passError = "비밀번호를 입력해주세요";
   }
   
-  // if there's no error, continue to login
   if (!$error) {
    
    $password = hash('sha256', $pass); // password hashing using SHA256
@@ -49,18 +45,19 @@
     $_SESSION['user'] = $row['userId'];
     header("Location: home.php");
    } else {
-    $errMSG = "Incorrect Credentials, Try again...";
+    $errMSG = "다시 시도해 주세요";
    }
     
   }
   
  }
+ 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coding Cage - Login & Registration System</title>
+<title>HJ DB PROJECT</title>
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"  />
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -123,7 +120,7 @@
             </div>
             
             <div class="form-group">
-             <a href="register.php">Sign Up Here...</a>
+             <a href="join.php">Sign Up Here...</a>
             </div>
         
         </div>
