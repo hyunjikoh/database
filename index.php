@@ -1,11 +1,11 @@
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-<title>홈페이지</title>
+<title>HJ DB PROJECT</title>
 </head>
 <body>
 <?
-include ("./lib/db_connect.php");
+include ("db_connect.php");
 $connect= dbconn();
 $member= member();
 ?>
@@ -14,7 +14,7 @@ $member= member();
 <TD WIDTH='100%' HEIGHT='100%' ALIGN='CENTER'>
 <table border='0' width='100%' height='100%' align='center' cellspacing='0' cellpadding='0'>
 <tr>
-<td width='100%' height='80' align='center' bgcolor='#764300'>
+<td width='100%' height='80' align='center' bgcolor='#5D5D5D'>
 <font color='#FFFFFF'><strong>[홈페이지 상단입니다]</strong></font>
 </td>
 
@@ -23,22 +23,22 @@ $member= member();
 <?if($member[user_id]){
 echo $member[name]."(".$member[user_id].") 님 환영합니다.";
 }else{?>
-<a href="./member/join.php"><strong>[회원가입]</strong></a> 
+<a href="join.php"><strong>[회원가입]</strong></a> 
 &nbsp; &nbsp; &nbsp;
-<a href="./member/login.php"><strong>[로그인]</strong></a> 
+<a href="login.php"><strong>[로그인]</strong></a> 
 <?}?>
 &nbsp; &nbsp;
 <?if($member[user_id]){?>
-<a href="./member/logout.php"><strong>[로그아웃]</strong></a> 
+<a href="logout.php"><strong>[로그아웃]</strong></a> 
 <?}?>
 </td>
 
 <tr>
-<td width='100%' height='30' align='center' bgcolor='#EDEDED'>My SQL 데이터 생성</td>
+<td width='100%' height='30' align='center' bgcolor='#EDEDED'></td>
 
 <tr>
 <td width='100%' height='200' align='left' valign='top' bgcolor='#FFFFFF'>
-<form action='./test2.php' name='test' method='post'>
+<form action='./test.php' name='test' method='post'>
 <input type='hidden' name='id' value='test'>
 <li>아이디: <input type='text' name='user_id' size='10'>
 <li>이름: <input type='text' name='name' size='10'>

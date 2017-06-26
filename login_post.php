@@ -1,6 +1,7 @@
 <? header("content-type:text/html; charset=UTF-8"); ob_start;
-   include("../db_connect.php");
-   $connect= dbconn();
+
+include("db_connect.php");
+$connect= dbconn();
 
 $user_id= $_POST[user_id];
 $pws= $_POST[pw];
@@ -33,5 +34,5 @@ setcookie("COOKIES",$tmp,time()+60*60*24,"/" );  //24시간동안 유효
 
 <script>
 window. alert('로그인 되었습니다.');
-location.href='../index.php';
+location.href="index.php";
 </script>
