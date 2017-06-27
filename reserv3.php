@@ -1,4 +1,4 @@
-r<html>
+<html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <title>HJ DB PROJECT</title>
@@ -36,9 +36,13 @@ $member= member();
       <table class="table" align="center">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">거부</a></td>
+           <td><input type="radio" name="radio1" value=null checked></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">와인</a></td>
+           <td><input type="radio" name="radio1" value="radio_value" checked></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">요리</a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px">타이마사지</a></td></tr>                      
+           <td><input type="radio" name="radio1" value="radio_value" checked></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px">타이마사지</a></td>
+           <td><input type="radio" name="radio1" value="radio_value" checked></td></tr>                      
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
@@ -51,9 +55,13 @@ $member= member();
       <table class="table" align="center">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">거부</a></td>
+           <td><input type="radio" name="radio2" value="radio_value" checked></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">한식</a></td>
+           <td><input type="radio" name="radio2" value="radio_value" checked></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">양식</a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px">중식</a></td></tr>                      
+           <td><input type="radio" name="radio2" value="radio_value" checked></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px">중식</a></td>
+           <td><input type="radio" name="radio2" value="radio_value" checked></td></tr>
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
@@ -62,5 +70,16 @@ $member= member();
     <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="result.php">예약하기</a></td>
   </TR>
 </TABLE>
+
+<form action="reserve_process.php" method="post">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
 </body>
 </html>

@@ -32,9 +32,9 @@ $member= member();
 <td width='100%' height='200' align='left' valign='top' bgcolor='#FFFFFF'>
 <form action='./test2.php' name='test' method='post'>
 <input type='hidden' name='id' value='test'>
-<li>아이디: <input type='text' name='user_id' size='10'>
-<li>이름: <input type='text' name='name' size='10'>
-<li>지점: <input type='text' name='name' size='10'>
+<li>ID: <input type='text' name='user_id' size='15'>
+<li>이름: <input type='text' name='name' size='15'>
+<li>지점: <input type='text' name='name' size='15'>
 <br><br>
 -리뷰-<br>
 <textarea name='memo' cols='100' rows='5'></textarea>
@@ -50,7 +50,7 @@ $member= member();
 
 
 //쿼리문으로 데이터를 불러오기
-$query= "select * from bbs_1 where id='test'";
+$query= "select * from review where id='test'";
 mysql_query("set names utf8", $connect);
 $result= mysql_query($query, $connect);
 while($data= mysql_fetch_array($result)){

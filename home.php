@@ -35,9 +35,9 @@ $member= member();
     <td align='center'>
       <table class="table" align="center">
          <tr>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1">서울</a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1">부산</a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1">제주</a></td></tr>                      
+           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?region=1">서울</a></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?region=2">부산</a></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?region=3">제주</a></td></tr>                      
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
@@ -45,6 +45,7 @@ $member= member();
    <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="review.php?reveiw"><strong>리뷰하기</strong></a></td>
   </TR>
+  <br><br>
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="board.php?board"><strong>자유게시판</strong></a></td>
   </TR>

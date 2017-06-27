@@ -1,4 +1,10 @@
-r<html>
+<?php
+ ob_start();
+ session_start();
+ require_once 'db_connect.php';
+ $region = $_GET['region'];
+ ?>
+<html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <title>HJ DB PROJECT</title>
@@ -33,13 +39,23 @@ $member= member();
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
-      <table class="table" align="center">
-         <tr>
-           <td align="center" HEIGHT="100px" WIDTH="100px">Single(1~2)</td>
-           <td align="center" HEIGHT="100px" WIDTH="100px">Deluxe(2~3)</td>
-           <td align="center" HEIGHT="100px" WIDTH="100px">Superior(3~4)</td></tr>                      
-        <tr><td></td><td></td><td></td></tr>
-      </table> 
+          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room where branchId = $region"); ?>
+          <table class="table">
+            <tr>
+              <th> ROOM </th>
+              <th> 예약현황 </th>
+              <th> 선택 </th>
+            </tr>
+            <?php
+            while($row = mysql_fetch_array($list_result)) {
+                if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
+                echo "<tr><td>".htmlspecialchars($row['roomNum'])."</td>
+                          <td>".htmlspecialchars($roomstatus)."</td>
+                          <td><input type=\"radio\" name=\"radio1\" value=\"radio_value\" checked></td></tr>";                        
+                }
+            ?>
+            <tr><td></td><td></td><td></td></tr>
+          </table> 
     </td>
   </TR>
   <TR HEIGHT='30px' >
