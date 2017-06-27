@@ -15,7 +15,7 @@ $member= member();
 <table border='0' width='100%' height='100%' align='center' cellspacing='0' cellpadding='0'>
 <tr>
 <td width='100%' height='80' align='center' bgcolor='#353535'>
-<font color='#FFFFFF'><strong>관리자 페이지</strong></font>
+<font color='#FFFFFF'><strong>Hotel 예약 서비스</strong></font>
 </td>
 
 <tr>
