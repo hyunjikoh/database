@@ -29,15 +29,15 @@ $member= member();
    </TD>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'>ROOM을 선택해주세요</td>
+    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
       <table class="table" align="center">
          <tr>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><b>서울</b></a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><strong>부산</strong></a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><strong>제주</strong></a></td></tr>                      
+           <td align="center" HEIGHT="100px" WIDTH="100px">Single(1~2)</td>
+           <td align="center" HEIGHT="100px" WIDTH="100px">Deluxe(2~3)</td>
+           <td align="center" HEIGHT="100px" WIDTH="100px">Superior(3~4)</td></tr>                      
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>

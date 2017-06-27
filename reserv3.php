@@ -59,7 +59,7 @@ $member= member();
     </td>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="home.php">결제하기</a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="result.php">예약하기</a></td>
   </TR>
 </TABLE>
 </body>

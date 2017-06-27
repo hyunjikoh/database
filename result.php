@@ -9,6 +9,7 @@ include ("db_connect.php");
 $connect= dbconn();
 $member= member();
 ?>
+<script>window. alert('예약되었습니다!');</script>
 <TABLE BORDER='0' WIDTH='100%' ALIGN='CENTER' CELLSPACING='0' CELLPADDING='0'>
   <TR HEIGHT='30px' >
    <TD WIDTH='100%' ALIGN='CENTER'>
@@ -29,7 +30,7 @@ $member= member();
    </TD>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>원하는 지점을 선택해주세요</strong></td>
+    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>예약 확인</strong></td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
@@ -42,11 +43,8 @@ $member= member();
       </table> 
     </td>
   </TR>
-   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="review.php?reveiw"><strong>리뷰하기</strong></a></td>
-  </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="board.php?board"><strong>자유게시판</strong></a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="home.php">홈으로</a></a></td>
   </TR>
 </TABLE>
 </body>
