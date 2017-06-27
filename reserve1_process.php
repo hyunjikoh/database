@@ -3,12 +3,10 @@
  session_start();
  require_once 'db_connect.php';
 
- 
- $insert_query = mysql_query($query);
- $query = "INSERT INTO a(col) VALUES('";
+ $query = "INSERT INTO temp(col) VALUES('";
  $query .= $_POST['roomType'];
  $query .= "');";
-
  mysql_query($query);
-
+ 
  ?>
+  <script> location.href = "reserv2.php?region=<?php echo $_GET['region'];?>"; </script>
