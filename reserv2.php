@@ -35,7 +35,6 @@ $member= member();
    </TD>
   </TR>
   
-  <form action="reserve_process.php" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
   </TR>
@@ -62,7 +61,6 @@ $member= member();
   </TR>
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv3.php?reserv3">확인</a></td>
-    </form>
   </TR>
 </TABLE>
 </body>

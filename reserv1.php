@@ -29,7 +29,7 @@ $region = $_GET['region'];
     </table>
    </TD>
   </TR>
-  <form action="reserve_process.php" method="post">
+  
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>숙박일을 선택해주세요</strong></td>
   </TR>
@@ -49,18 +49,20 @@ $region = $_GET['region'];
     <td align='center'>
       <table class="table" align="center">
          <tr>
+           <form action="reserve_process.php" method="post">
            <td align="center" HEIGHT="100px" WIDTH="100px">Single(1~2)</td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td>
+           <td><input type="radio" name="roomType" value="Single" checked></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">Deluxe(2~3)</td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td>
+           <td><input type="radio" name="roomType" value="Deluxe"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">Superior(3~4)</td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td></tr>                     
+           <td><input type="radio" name="roomType" value="Superior"></td></tr>
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv2.php?region=<?php echo $_GET['region'];?>">확인</a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><button type="submit" value = "submit"></button></td>
+    location.href="reserv2.php?region=<?php echo $_GET['region'];?>";
   </form>
   </TR>
 </TABLE>

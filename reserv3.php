@@ -73,16 +73,5 @@ $member= member();
     <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="result.php">예약하기</a></td>
   </TR>
 </TABLE>
-
-<form action="reserve_process.php" method="post">
-  First name:<br>
-  <input type="text" name="firstname" value="Mickey">
-  <br>
-  Last name:<br>
-  <input type="text" name="lastname" value="Mouse">
-  <br><br>
-  <input type="submit" value="Submit">
-</form> 
-
 </body>
 </html>
