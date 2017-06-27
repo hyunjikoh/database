@@ -1,4 +1,4 @@
-<html>
+r<html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <title>HJ DB PROJECT</title>
@@ -29,7 +29,7 @@ $member= member();
    </TD>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'>숙박일을 선택해주세요</td>
+    <td width='100%' height='30' align='center' bgcolor='#EDEDED'>ROOM을 선택해주세요</td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
@@ -42,22 +42,8 @@ $member= member();
       </table> 
     </td>
   </TR>
-    <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'>ROOM 타입을 선택해주세요</td>
-  </TR>
-    <TR HEIGHT='80px' >
-    <td align='center'>
-      <table class="table" align="center">
-         <tr>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><b></b></a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><strong>부산</strong></a></td>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1"><strong>제주</strong></a></td></tr>                      
-        <tr><td></td><td></td><td></td></tr>
-      </table> 
-    </td>
-  </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv2.php?reserv2">확인</a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv3.php?reserv3">확인</a></td>
   </TR>
 </TABLE>
 </body>

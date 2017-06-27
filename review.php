@@ -26,7 +26,7 @@ $member= member();
 </td>
 
 <tr>
-<td width='100%' height='30' align='center' bgcolor='#EDEDED'>My SQL 데이터 생성</td>
+<td width='100%' height='30' align='center' bgcolor='#EDEDED'>리뷰하기</td>
 
 <tr>
 <td width='100%' height='200' align='left' valign='top' bgcolor='#FFFFFF'>
@@ -34,9 +34,9 @@ $member= member();
 <input type='hidden' name='id' value='test'>
 <li>아이디: <input type='text' name='user_id' size='10'>
 <li>이름: <input type='text' name='name' size='10'>
-<li>비밀번호: <input type='password' name='pw' size='10'>
+<li>지점: <input type='text' name='name' size='10'>
 <br><br>
--메모-<br>
+-리뷰-<br>
 <textarea name='memo' cols='100' rows='5'></textarea>
 <br><br>
 <input type='submit' value='전 송'>
