@@ -41,7 +41,12 @@ $member= member();
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
-   
+  </TR>
+   <TR HEIGHT='30px' >
+    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="review.php?reveiw">리뷰하기</a></td>
+  </TR>
+  <TR HEIGHT='30px' >
+    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="board.php?board">자유게시판</a></td>
   </TR>
 </TABLE>
 </body>
