@@ -28,12 +28,14 @@ $member= member();
     </table>
    </TD>
   </TR>
+  <form action="reserve_process.php" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>룸서비스 여부</strong></td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
       <table class="table" align="center">
+         <form action="reserve_process.php" method="post">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">거부</a></td>
            <td><input type="radio" name="radio1" value=null checked></td>
@@ -66,6 +68,7 @@ $member= member();
       </table> 
     </td>
   </TR>
+  </form> 
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="result.php">예약하기</a></td>
   </TR>

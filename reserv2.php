@@ -34,6 +34,8 @@ $member= member();
     </table>
    </TD>
   </TR>
+  
+  <form action="reserve_process.php" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
   </TR>
@@ -51,7 +53,7 @@ $member= member();
                 if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
                 echo "<tr><td>".htmlspecialchars($row['roomNum'])."</td>
                           <td>".htmlspecialchars($roomstatus)."</td>
-                          <td><input type=\"radio\" name=\"radio1\" value=\"radio_value\" checked></td></tr>";                        
+                          <td><input type=\"radio\" name=\"room[]\" value=\"radio_value\" checked></td></tr>";                        
                 }
             ?>
             <tr><td></td><td></td><td></td></tr>
@@ -60,6 +62,7 @@ $member= member();
   </TR>
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv3.php?reserv3">확인</a></td>
+    </form>
   </TR>
 </TABLE>
 </body>
