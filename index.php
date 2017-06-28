@@ -41,6 +41,7 @@
    $row=mysql_fetch_array($res);
    $count = mysql_num_rows($res); // if uname/pass correct it returns must be 1 row
    
+
    if( $count == 1 && $row['userPass']==$password ) {
     $_SESSION['user'] = $row['userId'];
     $tmp=$row['userId']."//".$member['userPass'];

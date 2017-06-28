@@ -3,6 +3,7 @@
  session_start();
  require_once 'db_connect.php';
  $region = $_GET['region'];
+ $type = $_POST['roomType'];
  ?>
 <html>
 <head>
@@ -37,22 +38,23 @@ $member= member();
   
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
-  </TR>
+  </TR>s
   <TR HEIGHT='80px' >
     <td align='center'>
-          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room where branchId = $region"); ?>
+          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room natural join roomType where branchId = $region and roomtype = $type"); ?>
           <table class="table">
             <tr>
               <th> ROOM </th>
               <th> 예약현황 </th>
               <th> 선택 </th>
             </tr>
+            <form action="reserve2_process.php?region=<?php echo $_GET['region'];?>" method="post">
             <?php
             while($row = mysql_fetch_array($list_result)) {
                 if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
                 echo "<tr><td>".htmlspecialchars($row['roomNum'])."</td>
                           <td>".htmlspecialchars($roomstatus)."</td>
-                          <td><input type=\"radio\" name=\"room[]\" value=\"radio_value\" checked></td></tr>";                        
+                          <td><input type=\"radio\" name=\"room\" value=\"roomNum\"></td></tr>";                        
                 }
             ?>
             <tr><td></td><td></td><td></td></tr>
@@ -60,7 +62,8 @@ $member= member();
     </td>
   </TR>
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="reserv3.php?reserv3">확인</a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><button type="submit" value = "submit">확인</button></td>
+  </form>
   </TR>
 </TABLE>
 </body>

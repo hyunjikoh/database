@@ -41,6 +41,7 @@ $region = $_GET['region'];
            <td align="center" HEIGHT="100px" WIDTH="100px"><input type="date" name="date1" />~<input type="date" name="date2" /></td>
         <tr><td></td><td></td><td></td></tr>
       </table> 
+      
     </td>
   </TR>
     <TR HEIGHT='30px' >

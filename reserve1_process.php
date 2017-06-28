@@ -3,10 +3,8 @@
  session_start();
  require_once 'db_connect.php';
 
- $query = "INSERT INTO temp(col) VALUES('";
- $query .= $_POST['roomType'];
- $query .= "');";
- mysql_query($query);
+ mysql_query("INSERT INTO temp1 (dor, dco,roomtype) VALUES ('".$_POST['date1']."', '".$POST['date2']."','".$_POST['roomType']."')");
  
  ?>
-  <script> location.href = "reserv2.php?region=<?php echo $_GET['region'];?>"; </script>
+     
+  <script>location.href="reserv2.php?region=<?php echo $_GET['region'];?>&type=<?php echo $_POST['roomType'];?>"</script>

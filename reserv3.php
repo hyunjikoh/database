@@ -28,23 +28,22 @@ $member= member();
     </table>
    </TD>
   </TR>
-  <form action="reserve_process.php" method="post">
+  <form action="reserve3_process.php?region=<?php echo $_GET['region'];?>" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>룸서비스 여부</strong></td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
       <table class="table" align="center">
-         <form action="reserve_process.php" method="post">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">거부</a></td>
-           <td><input type="radio" name="radio1" value=null checked></td>
+           <td><input type="radio" name="service" value="거부"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">와인</a></td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td>
+           <td><input type="radio" name="service" value="와인"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">요리</a></td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td>
+           <td><input type="radio" name="service" value="요리"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">타이마사지</a></td>
-           <td><input type="radio" name="radio1" value="radio_value" checked></td></tr>                      
+           <td><input type="radio" name="service" value="타이마사지"></td></tr>                      
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
@@ -57,20 +56,20 @@ $member= member();
       <table class="table" align="center">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">거부</a></td>
-           <td><input type="radio" name="radio2" value="radio_value" checked></td>
+           <td><input type="radio" name="food" value="거부"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">한식</a></td>
-           <td><input type="radio" name="radio2" value="radio_value" checked></td>
+           <td><input type="radio" name="food" value="한식"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">양식</a></td>
-           <td><input type="radio" name="radio2" value="radio_value" checked></td>
+           <td><input type="radio" name="food" value="양식"></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">중식</a></td>
-           <td><input type="radio" name="radio2" value="radio_value" checked></td></tr>
+           <td><input type="radio" name="food" value="중식"></td></tr>
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
   </TR>
-  </form> 
   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><a href="result.php">예약하기</a></td>
+    <td width='100%' height='30' align='center' bgcolor='#DEB8B8'><font color='#FFFFFF'><button type="submit" value = "submit">예약확인</button></td>
+  </form>
   </TR>
 </TABLE>
 </body>
