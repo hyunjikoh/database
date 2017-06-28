@@ -38,7 +38,7 @@ $member= member();
   
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
-  </TR>s
+  </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
           <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room natural join roomType where branchId = $region and roomtype = $type"); ?>

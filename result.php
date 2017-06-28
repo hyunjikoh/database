@@ -36,6 +36,8 @@ $member= member();
     <td align='center'>
       <table class="table" align="center">
          <tr>
+           <? php
+           mysql_query("INSERT INTO temp2 (roomNum) VALUES ('".$_POST['room']."')"); ?>
            <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1">서울</a></td></tr>                      
         <tr><td></td><td></td><td></td></tr>
       </table> 
