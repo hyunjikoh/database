@@ -21,8 +21,9 @@ $member= member();
       </tr>
       <tr>
         <td width='100%' height='50' align='right'>
-         <?if($member[user_id]){?>
-           <a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
+         <?if($member[user_id]){
+         ?<p style= "text-aligh: center;">환영합니다! <?=$_COOKIE["ID"]?>님</p><?
+         ?><a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
          <?}?>
         </td>
       </tr>
@@ -36,9 +37,10 @@ $member= member();
     <td align='center'>
       <table class="table" align="center">
          <tr>
-           <? php
-           mysql_query("INSERT INTO temp2 (roomNum) VALUES ('".$_POST['room']."')"); ?>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><a href="reserv1.php?reserv1">서울</a></td></tr>                      
+            <td align="center" HEIGHT="100px" WIDTH="100px">아이디</a></td></tr>    
+            <? $temps=$_COOKIE["ID"]; ?>
+            <? php mysql_query("INSERT INTO reservation (bookingId,userEmail) VALUES ('','a')"); ?>
+                                 
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>

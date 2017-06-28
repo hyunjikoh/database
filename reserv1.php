@@ -21,8 +21,9 @@ $region = $_GET['region'];
       </tr>
       <tr>
         <td width='100%' height='50' align='right'>
-         <?if($member[user_id]){?>
-           <a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
+         <?if($member[user_id]){
+         ?<p style= "text-aligh: center;">환영합니다! <?=$_COOKIE["ID"]?>님</p><?
+         ?><a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
          <?}?>
         </td>
       </tr>

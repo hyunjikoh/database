@@ -3,8 +3,7 @@
  session_start();
  require_once 'db_connect.php';
  $region = $_GET['region'];
- $type = $_POST['roomType'];
- echo $type;
+ $type = $_GET['type'];
  ?>
 <html>
 <head>
@@ -28,8 +27,9 @@ $member= member();
       </tr>
       <tr>
         <td width='100%' height='50' align='right'>
-         <?if($member[user_id]){?>
-           <a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
+         <?if($member[user_id]){
+         ?<p style= "text-aligh: center;">환영합니다! <?=$_COOKIE["ID"]?>님</p><?
+         ?><a href="logout.php?logout"><strong>[로그아웃]</strong></a> 
          <?}?>
         </td>
       </tr>
@@ -43,7 +43,7 @@ $member= member();
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
-          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room where branchId = $region "); ?>
+          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room where branchId = $region and typeId = $type"); ?>
           <table class="table">
             <tr>
               <th> ROOM </th>
@@ -55,7 +55,7 @@ $member= member();
                 if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
                 echo "<tr><td>".htmlspecialchars($row['roomNum'])."</td>
                           <td>".htmlspecialchars($roomstatus)."</td>
-                          <td><input type=\"radio\" name=\"room\" value=\"roomNum\"></td></tr>";                        
+                          <td><input type=\"radio\" name=\"room\" value=\"".$row['roomNum']."\"></td></tr>";                        
                 }
             ?>
             <tr><td></td><td></td><td></td></tr>
