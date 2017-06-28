@@ -53,6 +53,7 @@ $member= member();
             <?php
             while($row = mysql_fetch_array($list_result)) {
                 if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
+                else if ($row['roomstatus'] == 1) $roomstatus = "예약불가";
                 echo "<tr><td>".htmlspecialchars($row['roomNum'])."</td>
                           <td>".htmlspecialchars($roomstatus)."</td>
                           <td><input type=\"radio\" name=\"room\" value=\"".$row['roomNum']."\"></td></tr>";                        
