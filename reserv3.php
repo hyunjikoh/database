@@ -1,14 +1,14 @@
+<?php
+ ob_start();
+ session_start();
+ require_once 'db_connect.php';
+ ?>
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 <title>HJ DB PROJECT</title>
 </head>
 <body>
-<?
-include ("db_connect.php");
-$connect= dbconn();
-$member= member();
-?>
 <TABLE BORDER='0' WIDTH='100%' ALIGN='CENTER' CELLSPACING='0' CELLPADDING='0'>
   <TR HEIGHT='30px' >
    <TD WIDTH='100%' ALIGN='CENTER'>

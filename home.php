@@ -43,13 +43,7 @@ $member= member();
       </table> 
     </td>
   </TR>
-   <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="review.php?reveiw"><strong>리뷰하기</strong></a></td>
-  </TR>
   <br><br>
-  <TR HEIGHT='30px' >
-    <td width='100%' height='30' align='center' bgcolor='#EDEDED'><a href="board.php?board"><strong>자유게시판</strong></a></td>
-  </TR>
 </TABLE>
 </body>
 </html>

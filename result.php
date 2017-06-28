@@ -2,23 +2,39 @@
     ob_start();
     session_start();
     require_once 'db_connect.php';
- 
+    
+    $success = true;
+    
     $temps=$_COOKIE["ID"]; 
     mysql_query("INSERT INTO reservation (bookingId,userEmail) VALUES ('','$temps')");
     mysql_query("update reservation set branchId = '".$_GET['region']."'where userEmail = '$temps'");
     
+    mysql_query("START TRANSACTION");
+    
     $temp1=mysql_query("select * from temp1 order by time desc limit 1;");
     $row1=mysql_fetch_array($temp1);
-    mysql_query("update reservation set dor = '".$row1['dor']."',dco = '".$row1['dco']."', roomType = '".$row1['roomtype']."' where userEmail = '$temps'");
+    $result=mysql_query("update reservation set dor = '".$row1['dor']."',dco = '".$row1['dco']."', roomType = '".$row1['roomtype']."' where userEmail = '$temps'");
+    if(@mysql_errno()) $success = false;
     
     $temp2=mysql_query("select * from temp2 order by time desc limit 1;");
     $row2=mysql_fetch_array($temp2);
-    mysql_query("update reservation set roomNum = '".$row2['roomNum']."'where userEmail = '$temps'");
-    mysql_query("update room set roomstatus = 1 where roomNum = '".$row2['roomNum']."'");
+    $result = mysql_query("update reservation set roomNum = '".$row2['roomNum']."'where userEmail = '$temps'");
+    if(@mysql_errno()) $success = false;
+    $result = mysql_query("update room set roomstatus = 1 where roomNum = '".$row2['roomNum']."'");
+    if(@mysql_errno()) $success = false;
 
     $temp3=mysql_query("select * from temp3 order by time desc limit 1;");
     $row3=mysql_fetch_array($temp3);
-    mysql_query("update reservation set servicetype = '".$row3['servicetype']."', brunchtype = '".$row3['brunchtype']."'where userEmail = '$temps'");
+    $result = mysql_query("update reservation set servicetype = '".$row3['servicetype']."', brunchtype = '".$row3['brunchtype']."'where userEmail = '$temps'");
+    if(@mysql_errno()) $success = false;
+
+    if(!$success) {$result = mysql_query("ROOLBACK",$conn);
+        echo("롤백되었습니다.");
+    }
+    else {
+        $result = mysql_query("COMMIT",$conn);
+        echo("입력되었습니다");
+    }
 ?>
 
 <html>
@@ -70,6 +86,7 @@ $member= member();
               <th> 체크아웃 </th>
               <th> 룸서비스 </th>
               <th> 조식 </th>
+              <th> 담당직원 </th>
             </tr>
             <?php
             while($row = mysql_fetch_array($list_result)) {
@@ -83,13 +100,16 @@ $member= member();
                  else $ser =$row['servicetype'];
                  if($row['brunchtype']==NULL) $bru = "거부";
                  else $bru =$row['brunchtype'];
+                 $que = mysql_query("Select empName from employee where branchId = '".$row['branchId']."'");
+                 $emp = mysql_fetch_array($que);
                  echo "<tr><td>".htmlspecialchars($bran)."</td>
                           <td>".htmlspecialchars($row['roomNum'])."</td>
                           <td>".htmlspecialchars($roomT)."</td>
                           <td>".htmlspecialchars($row['dor'])."</td>
                           <td>".htmlspecialchars($row['dco'])."</td>
                           <td>".htmlspecialchars($ser)."</td>
-                          <td>".htmlspecialchars($bru)."</td></tr>";                        
+                          <td>".htmlspecialchars($bru)."</td>
+                          <td>".htmlspecialchars($emp['empName'])."</td></tr>";                        
                 }
             ?>
             <tr><td></td><td></td><td></td></tr>
