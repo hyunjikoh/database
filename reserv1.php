@@ -52,11 +52,11 @@ $region = $_GET['region'];
       <table class="table" align="center">
          <tr>
            <td align="center" HEIGHT="100px" WIDTH="100px">Single(1~2)</td>
-           <td><input type="radio" name="roomType" value="Single"></td>
+           <td><input type="radio" name="roomType" value=1></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">Deluxe(2~3)</td>
-           <td><input type="radio" name="roomType" value="Deluxe"></td>
+           <td><input type="radio" name="roomType" value=2></td>
            <td align="center" HEIGHT="100px" WIDTH="100px">Superior(3~4)</td>
-           <td><input type="radio" name="roomType" value="Superior"></td></tr>
+           <td><input type="radio" name="roomType" value=3></td></tr>
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>

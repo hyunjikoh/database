@@ -28,6 +28,7 @@ $member= member();
     </table>
    </TD>
   </TR>
+  
   <form action="reserve3_process.php?region=<?php echo $_GET['region'];?>" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>룸서비스 여부</strong></td>

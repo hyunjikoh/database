@@ -4,6 +4,7 @@
  require_once 'db_connect.php';
  $region = $_GET['region'];
  $type = $_POST['roomType'];
+ echo $type;
  ?>
 <html>
 <head>
@@ -36,19 +37,19 @@ $member= member();
    </TD>
   </TR>
   
+  <form action="reserve2_process.php?region=<?php echo $_GET['region'];?>" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>ROOM을 선택해주세요</strong></td>
   </TR>
   <TR HEIGHT='80px' >
     <td align='center'>
-          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room natural join roomType where branchId = $region and roomtype = $type"); ?>
+          <?php $list_result = mysql_query("SELECT roomNum,roomstatus FROM room where branchId = $region "); ?>
           <table class="table">
             <tr>
               <th> ROOM </th>
               <th> 예약현황 </th>
               <th> 선택 </th>
             </tr>
-            <form action="reserve2_process.php?region=<?php echo $_GET['region'];?>" method="post">
             <?php
             while($row = mysql_fetch_array($list_result)) {
                 if($row['roomstatus'] == NULL) $roomstatus = "예약가능";
