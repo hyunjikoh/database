@@ -3,7 +3,7 @@
  session_start();
  require_once 'db_connect.php';
 
- mysql_query("INSERT INTO temp1 (dor, dco,roomtype) VALUES ('".$_POST['date1']."', '".$POST['date2']."','".$_POST['roomType']."')");
+ mysql_query("INSERT INTO temp1 (dor, dco,roomtype) VALUES ('".$_POST['date1']."','".$_POST['date2']."','".$_POST['roomType']."')");
  $roomType = $_POST['roomType'];
  
  ?>

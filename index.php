@@ -45,8 +45,8 @@
    if( $count == 1 && $row['userPass']==$password ) {
     $_SESSION['user'] = $row['userId'];
     $tmp=$row['userId']."//".$member['userPass'];
-    setcookie("ID",$email,time()+60*60 );  //1시간동안 유효
-    setcookie("PASSWORD",$password,time()+60*60 );
+    setcookie("ID",$email,time()+60*60*24 );  //1시간동안 유효
+    setcookie("PASSWORD",$password,time()+60*60*24 );
     if($email=='hyunjikoh@naver.com') header("Location: adminhome.php");
     else header("Location: home.php");
    } else {

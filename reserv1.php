@@ -39,10 +39,10 @@ $region = $_GET['region'];
     <td align='center'>
       <table class="table" align="center">
          <tr>
-           <td align="center" HEIGHT="100px" WIDTH="100px"><input type="date" name="date1" />~<input type="date" name="date2" /></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px"><input type="date" name="date1" /></td>
+           <td align="center" HEIGHT="100px" WIDTH="100px"><input type="date" name="date2" /></td>
         <tr><td></td><td></td><td></td></tr>
       </table> 
-      
     </td>
   </TR>
     <TR HEIGHT='30px' >

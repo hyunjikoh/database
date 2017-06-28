@@ -1,3 +1,26 @@
+<?php 
+    ob_start();
+    session_start();
+    require_once 'db_connect.php';
+ 
+    $temps=$_COOKIE["ID"]; 
+    mysql_query("INSERT INTO reservation (bookingId,userEmail) VALUES ('','$temps')");
+    mysql_query("update reservation set branchId = '".$_GET['region']."'where userEmail = '$temps'");
+    
+    $temp1=mysql_query("select * from temp1 order by time desc limit 1;");
+    $row1=mysql_fetch_array($temp1);
+    mysql_query("update reservation set dor = '".$row1['dor']."',dco = '".$row1['dco']."', roomType = '".$row1['roomtype']."' where userEmail = '$temps'");
+    
+    $temp2=mysql_query("select * from temp2 order by time desc limit 1;");
+    $row2=mysql_fetch_array($temp2);
+    mysql_query("update reservation set roomNum = '".$row2['roomNum']."'where userEmail = '$temps'");
+
+    $temp3=mysql_query("select * from temp3 order by time desc limit 1;");
+    $row3=mysql_fetch_array($temp3);
+    mysql_query("update reservation set servicetype = '".$row3['servicetype']."', brunchtype = '".$row3['brunchtype']."'where userEmail = '$temps'");
+    
+?>
+
 <html>
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
@@ -38,9 +61,7 @@ $member= member();
       <table class="table" align="center">
          <tr>
             <td align="center" HEIGHT="100px" WIDTH="100px">아이디</a></td></tr>    
-            <? $temps=$_COOKIE["ID"]; ?>
-            <? php mysql_query("INSERT INTO reservation (bookingId,userEmail) VALUES ('','a')"); ?>
-                                 
+                    
         <tr><td></td><td></td><td></td></tr>
       </table> 
     </td>
