@@ -29,7 +29,7 @@
    $nameError = "Please enter your full name.";
   } else if (strlen($name) < 3) {
    $error = true;
-   $nameError = "Name must have atleat 3 characters.";
+   $nameError = "Name must have atleast 3 characters.";
   }
   
   //basic email validation

@@ -28,7 +28,7 @@ $member= member();
     </table>
    </TD>
   </TR>
-  <form action="adminprocess1.php>" method="post">
+  <form action="adminprocess1.php" method="post">
   <TR HEIGHT='30px' >
     <td width='100%' height='30' align='center' bgcolor='#EDEDED'><strong>룸 수정</strong></td>
   </TR>
@@ -44,7 +44,7 @@ $member= member();
            <option value=3 <?php if($_POST['branch']=="Jeju") echo "selected=selected"; ?>>Jeju</option>
            </select>
            </td>
-           <td align="center" HEIGHT="100px" WIDTH="50px">방번호</a>
+           <td align="center" HEIGHT="100px" WIDTH="100px">방번호</a>
            <td><input type="text" name="roomnum"></td>
            </td>
            <td align="center" HEIGHT="100px" WIDTH="100px">변경타입</a>
@@ -81,7 +81,7 @@ $member= member();
            </select>
            </td>
            <td align="center" HEIGHT="100px" WIDTH="100px">방번호</a>
-           <td><input type="text" name="food"></td>
+           <td><input type="text" name="roomnum"></td>
            </td>
         <tr><td></td><td></td><td></td></tr>
       </table> 
